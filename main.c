@@ -40,6 +40,26 @@ void func_greatings(enum idiomas_enum idioma){
     }
 }
 
+
+void func_oi(enum idiomas_enum idioma){
+        switch (idioma)
+    {
+    case PORTUGUES:
+        printf("Oi\n");
+        break;
+    case INGLES:
+        printf("Hello! \n");
+        break;
+    case ESPANHOL:
+        printf("Hola! \n");
+        break;
+
+    default:
+        printf("Language selected is not valid \n");
+        break;
+    }
+}
+
 int main(void)
 {
     func_hello_world();
