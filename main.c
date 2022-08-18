@@ -18,7 +18,7 @@ void func_hello_world(void){
 }
 
 void func_oi_mundo(void){
-    printf("Oi Mundo");
+    printf("Oi Mundo!");
 }
  
 void func_greatings(enum idiomas_enum idioma){
