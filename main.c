@@ -5,7 +5,12 @@
 void func_hello_world(void){
     printf("Hello World");
 }
+
+void func_oi_mundo(void){
+    printf("Oi Mundo");
+}
  
+
 int main(void)
 {
     func_hello_world();
