@@ -6,7 +6,8 @@
  
 int main(void)
 {
-    printf("Hell World");
+    printf("Hello World");
+    printf("Oi Mundo");
 
     return 0;
 }
