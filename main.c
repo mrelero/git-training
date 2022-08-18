@@ -68,6 +68,7 @@ int main(void)
     func_greatings(INGLES);
     func_greatings(PORTUGUES);
     func_greatings(ESPANHOL);
+    func_oi(INGLES);
     
 
     return 0;
