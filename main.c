@@ -18,7 +18,8 @@ void func_oi_mundo(void){
 int main(void)
 {
     func_hello_world();
-    printf("Oi Mundo");
+    func_oi_mundo();
+    func_hola_mundo();
 
     return 0;
 }
