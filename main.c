@@ -10,6 +10,11 @@ enum idiomas_enum{
     ALEMAO,
 };
 
+///Clienter quer um Hello World Estilizado
+void func_hello_world_new(void){
+    printf("Hello World! :) ");
+}
+
 void func_hallo_welt(void){
     printf("Hallo Welt!");
 }
