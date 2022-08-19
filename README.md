@@ -98,4 +98,9 @@ git rebase master topic
     D---E---F---G master
 ```
 
+O Rebase também pode funcionar para editar e manipular commits já ralizados:
+```
+git rebase -i HEAD~3
+```
+
 
