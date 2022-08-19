@@ -113,3 +113,40 @@ Para editar, existem alguns comandos:
 - Reword: Edita a mensagem do Commit;
 - Squash: Combina Commits
 
+## Reflog
+
+O Comando Reflog apresenta de forma detalhada todas as últimas ações executadas. Cada ação tem um Hash que pode ser usado para outras ações de correção de erro. 
+```
+632744c HEAD@{2}: commit: Oi Mundo em Turco
+54d918b (HEAD -> main) HEAD@{3}: commit: Alemao na Main
+7bbf312 (origin/main, origin/HEAD) HEAD@{4}: commit: Readme
+ce5577e HEAD@{6}: rebase (pick): Novo Update de GIT
+5355cec HEAD@{7}: rebase (reword): Atualização do Arquivo README com dados do Rebase.
+218429b HEAD@{8}: rebase: fast-forward
+468e783 (origin/hotfix-language, hotfix-language) HEAD@{9}: rebase (start): checkout HEAD~3
+c13cb85 HEAD@{10}: rebase (abort): updating HEAD
+c13cb85 HEAD@{11}: rebase (abort): updating HEAD
+c13cb85 HEAD@{12}: rebase (abort): updating HEAD
+c13cb85 HEAD@{13}: rebase (abort): updating HEAD
+c13cb85 HEAD@{14}: rebase (abort): updating HEAD
+c13cb85 HEAD@{15}: rebase (abort): updating HEAD
+c13cb85 HEAD@{16}: rebase (abort): updating HEAD
+```
+
+Suponha que um commit 632744c tenha sido excluído, e você percebe que foi um erro e decide restaurar. Para isso, pode-se utilizar um truque simples: 
+```
+git branch correcao-turco 632744c
+```
+Você cria uma Nova Branch a partir do Hash excluído. Tudo será recuperado. 
+
+
+
+## Referências
+
+https://git-scm.com/docs/git-rebase
+
+https://www.youtube.com/watch?v=RGOj5yH7evk&t=2267s&ab_channel=freeCodeCamp.org
+
+https://www.youtube.com/watch?v=Uszj_k0DGsg&ab_channel=freeCodeCamp.org
+
+https://www.youtube.com/watch?v=qsTthZi23VE&t=903s&ab_channel=freeCodeCamp.org
