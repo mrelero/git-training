@@ -25,6 +25,10 @@ void func_hello_world(void){
 void func_oi_mundo(void){
     printf("Oi Mundo!");
 }
+
+void func_selam_dunya(void){
+    printf("Selam Dünya");
+}
  
 void func_greatings(enum idiomas_enum idioma){
     switch (idioma)
