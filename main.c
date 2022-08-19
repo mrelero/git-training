@@ -7,6 +7,7 @@ enum idiomas_enum{
     PORTUGUES = 1,
     INGLES,
     ESPANHOL,
+    ALEMAO,
 };
 
 void func_hallo_welt(void){
@@ -31,10 +32,16 @@ void func_greatings(enum idiomas_enum idioma){
     case PORTUGUES:
         printf("Oi Mundo\n");
         break;
+    
     case INGLES:
         printf("Hello World! \n");
         break;
+    
     case ESPANHOL:
+        printf("Hola Mundo! \n");
+        break;
+    
+    case ALEMAO:
         printf("Hola Mundo! \n");
         break;
 
