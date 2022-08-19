@@ -1,0 +1,3 @@
+[submodule "sql-python-study"]
+	path = sql-python-study
+	url = https://github.com/mrelero/sql-python-study.git

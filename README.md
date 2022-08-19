@@ -139,7 +139,23 @@ git branch correcao-turco 632744c
 ```
 Você cria uma Nova Branch a partir do Hash excluído. Tudo será recuperado. 
 
+Como o Reflog também é possível recuperar branchs excluídas seguidno mesmo processo. 
+```
+e34dfe9 (HEAD -> main, origin/main, origin/correcao-turco, origin/HEAD, correcao-turco) HEAD@{0}: checkout: moving from nova-feature to main
+c0e1e67 (origin/nova-feature) HEAD@{1}: checkout: moving from main to nova-feature
+e34dfe9 (HEAD -> main, origin/main, origin/correcao-turco, origin/HEAD, correcao-turco) HEAD@{4}: checkout: moving from main to nova-feature
+e34dfe9 (HEAD -> main, origin/main, origin/correcao-turco, origin/HEAD, correcao-turco) HEAD@{5}: merge correcao-turco: Fast-forward
+54d918b HEAD@{6}: checkout: moving from correcao-turco to main
+e34dfe9 (HEAD -> main, origin/main, origin/correcao-turco, origin/HEAD, correcao-turco) HEAD@{7}: commit: Commit recuperado e Readme Reflog
+632744c HEAD@{8}: checkout: moving from main to correcao-turco
+```
+- e34dfe9: Foi movido da Feature nova-feature para main (No caso, a Branch foi excluída, tanto no local quanto no remoto)
 
+Para recuperar, foi utilizado o comando git branch, e indicando o mesmo nome da branch, e o HASH de quando foi realizado o checkout para a Branch deletada.
+
+```
+git branch nova-feature c0e1e67
+```
 
 ## Referências
 
