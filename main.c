@@ -80,7 +80,8 @@ int main(void)
     func_greatings(PORTUGUES);
     func_greatings(ESPANHOL);
     func_oi(INGLES);
-    
+    func_hallo_welt();
+    func_greatings(ALEMAO);
 
     return 0;
 }

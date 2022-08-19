@@ -107,6 +107,8 @@ git rebase -i HEAD~3
 
 > No Windows, quando o comando for executado, ira abrir um novo arquivo. Para salvar, deve-se apertar ESC e depois escrever :wq. 
 
+> O número "3" em HEAD~**3**, significa que será buscado 3 Commits desde o último. 
+
 Para editar, existem alguns comandos: 
 - Reword: Edita a mensagem do Commit;
 - Squash: Combina Commits
