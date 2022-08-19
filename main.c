@@ -39,7 +39,7 @@ void func_greatings(enum idiomas_enum idioma){
         break;
 
     default:
-        printf("Language selected is not valid \n");
+        printf("Language selected is not valid, please insert a valide one \n");
         break;
     }
 }
