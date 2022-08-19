@@ -77,6 +77,8 @@ $git merge Main
 ```
 
 ## Rebase
+>🚧 Importante! Evitar usar Rebases em Commits que já tenha sido enviados para o repositório remoto. 
+
 O Git Rebase tem como objetivo de reaplicar os commits realizados em outra base. Por exemplo:
 
 - Suponha que você está na Branch Topic. E Ocorreram dois commits 
@@ -103,4 +105,9 @@ O Rebase também pode funcionar para editar e manipular commits já ralizados:
 git rebase -i HEAD~3
 ```
 
+> No Windows, quando o comando for executado, ira abrir um novo arquivo. Para salvar, deve-se apertar ESC e depois escrever :wq. 
+
+Para editar, existem alguns comandos: 
+- Reword: Edita a mensagem do Commit;
+- Squash: Combina Commits
 
