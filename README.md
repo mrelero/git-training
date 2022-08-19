@@ -76,4 +76,26 @@ $git checkout Feature
 $git merge Main
 ```
 
+## Rebase
+O Git Rebase tem como objetivo de reaplicar os commits realizados em outra base. Por exemplo:
+
+- Suponha que você está na Branch Topic. E Ocorreram dois commits 
+
+```
+          A---B---C topic
+         /
+    D---E---F---G master
+```
+- Caso deseja aplicar os commits F e G ao topic, é possível realizar um Rebase da Branch. 
+```
+git rebase master
+git rebase master topic
+```
+- O resultado é F e G.
+```
+                  A'--B'--C' topic
+                 /
+    D---E---F---G master
+```
+
 
