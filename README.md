@@ -157,6 +157,24 @@ Para recuperar, foi utilizado o comando git branch, e indicando o mesmo nome da 
 git branch nova-feature c0e1e67
 ```
 
+## Submodule
+Trabalhar com Submodule pode ajudar a importar bibliotecas e arquivos de outros repositórios. A função é muito simples:
+
+```
+git submodule add URL
+```
+Ao executar o comando, o repositório e seus arquivos são clonados diretamente para o seu repositório. 
+
+>❗️ Importante! Em caso de clonar um repositório que já tenha outros submódulos, as pastas de cada um deles vem vazia. Para isso, alguns comandos de update podem ser utilizados:
+```
+git submodule update --init --recursive
+
+ou
+
+git clone --recurse-submodules URL
+```
+
+
 ## Referências
 
 https://git-scm.com/docs/git-rebase
