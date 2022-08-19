@@ -9,6 +9,10 @@ enum idiomas_enum{
     ESPANHOL,
 };
 
+void func_hallo_welt(void){
+    printf("Hallo Welt!");
+}
+
 void func_hola_mundo(void){
     printf("Hola Mundo!");
 }
