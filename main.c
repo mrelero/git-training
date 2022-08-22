@@ -59,6 +59,10 @@ void func_6(void){
     printf("6!!");
 }
 
+void func_7(void){
+    printf("7 ");
+}
+
 void func_greatings(enum idiomas_enum idioma){
     switch (idioma)
     {
