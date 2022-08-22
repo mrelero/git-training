@@ -1,4 +1,4 @@
-# git-trainning-private
+# git-trainning
 Repositório criado para treinar comandos do Git. 
 
 ## O que é ?
