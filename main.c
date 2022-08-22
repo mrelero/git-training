@@ -36,15 +36,15 @@ void func_selam_dunya(void){
 }
 
 void func_1(void){
-    printf("1");
+    printf("1!");
 }
 
 void func_2(void){
-    printf("2");
+    printf("2!");
 }
 
 void func_3(void){
-    printf("3");
+    printf("3!");
 }
  
 void func_greatings(enum idiomas_enum idioma){
