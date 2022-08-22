@@ -39,7 +39,7 @@ void func_greatings(enum idiomas_enum idioma){
     switch (idioma)
     {
     case PORTUGUES:
-        printf("Oi Mundo\n");
+        printf("Oi Mundo! \n");
         break;
     
     case INGLES:
@@ -55,7 +55,7 @@ void func_greatings(enum idiomas_enum idioma){
         break;
 
     default:
-        printf("Language selected is not valid, please insert a valide one \n");
+        printf("Language selected is not valid, please insert a valide one! \n");
         break;
     }
 }
