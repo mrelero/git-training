@@ -46,7 +46,15 @@ void func_2(void){
 void func_3(void){
     printf("3!");
 }
- 
+
+void func_4(void){
+    printf("4");
+}
+
+void func_5(void){
+    printf("5");
+}
+
 void func_greatings(enum idiomas_enum idioma){
     switch (idioma)
     {
