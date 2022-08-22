@@ -34,6 +34,11 @@ void func_oi_mundo(void){
 void func_selam_dunya(void){
     printf("Selam Dünya");
 }
+
+void func_1(void){
+    printf("1");
+}
+ 
  
 void func_greatings(enum idiomas_enum idioma){
     switch (idioma)
