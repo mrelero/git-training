@@ -28,7 +28,7 @@ void func_hello_world(void){
 }
 
 void func_oi_mundo(void){
-    printf("Oi Mundo \n");
+    printf("Ola Mundo \n");
 }
 
 void func_selam_dunya(void){
