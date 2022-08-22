@@ -89,7 +89,7 @@ void func_oi(enum idiomas_enum idioma){
         switch (idioma)
     {
     case PORTUGUES:
-        printf("Oi\n");
+        printf("Oi \n");
         break;
     case INGLES:
         printf("Hello! \n");
