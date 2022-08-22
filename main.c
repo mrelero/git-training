@@ -12,27 +12,27 @@ enum idiomas_enum{
 
 ///Clienter quer um Hello World Estilizado
 void func_hello_world_new(void){
-    printf("Hello World! :) ");
+    printf("Hello World!\n) ");
 }
 
 void func_hallo_welt(void){
-    printf("Hallo Welt!");
+    printf("Hallo Welt!\n");
 }
 
 void func_hola_mundo(void){
-    printf("Hola Mundo!");
+    printf("Hola Mundo!\n");
 }
 
 void func_hello_world(void){
-    printf("Hello World!");
+    printf("Hello World!\n");
 }
 
 void func_oi_mundo(void){
-    printf("Oi Mundo!");
+    printf("Oi Mundo!\n");
 }
 
 void func_selam_dunya(void){
-    printf("Selam Dünya");
+    printf("Selam Dünya!\n");
 }
  
 void func_greatings(enum idiomas_enum idioma){
