@@ -173,7 +173,63 @@ ou
 
 git clone --recurse-submodules URL
 ```
+## Quando usar Merge e Rebase
 
+Suponha que temos a seguinte situação:
+
+```
+          A---B---C topic
+         /
+    D---E---F---G master
+```
+
+1) Usando o Merge
+
+Podemos aplicar o Merge do **topic** na **master**, assim ambos os desenvolvimentos serão mesclados. 
+```
+>>Mergeq
+          A---B---C  topic
+         /         \     
+    D---E---F---G---H master
+```
+Em H, o projeto irá conter os desenvolvimentos de topic e master mesclados, e em caso de conflitos, os mesmos devem ser resolvidos na hora do merge. No entanto, perceba que os commits A, B e C da Branch **topic** não consideram os commits F e G da **master**, o que pode ser um problema, pois as branchs desincronizada podem ocasionar problemas no funcionamento geral. 
+
+Neste caso, o ideal é realizar testes com os códigos mesclados antes de enviar para a master. Uma estrutura é utilizar o merge em uma branch **dev** intermediária a master, que pode ser utilizada para testes, e manipulações antes de ser mesclada na master. 
+
+```
+>>Merge
+          A---B---C  topic
+         /         \     
+    D---E---F---G---H dev
+    |   |   |   |    \*Testes
+    D---E---F---G-----H  master
+```
+
+2) Usando Rebase
+
+Com o Rebase, os commits aplicados na Branch **topic** serão considerados após a o último commit G da master. Este processo "Sincroniza" a branch topic com a master, levando todas as atualizações da branch master para a **topic**. Com isso, é possível realizar o desenvolvimento na branch **topic** considerando todas as atualizações feitas na master, e trabalhar nas possíveis implicações que os commits F e G comprometeriam na branch **topic**.  
+
+```
+>>Rebase
+                  A'--B'--C' topic
+                 /
+    D---E---F---G master
+```
+Depois, o comando merge pode ser aplicado para levar o desenvolvimento da branch **topic** na **master**.
+```
+>>Merge
+                  A'--B'--C' topic
+                 /         \
+    D---E---F---G-----------H' master
+```
+
+Como G = A' e C'=H', o resultado final fica:
+
+```
+>>Merge
+    D---E---F---G/A'--B'--H'/c' master
+```
+Dessa forma, a linha do tempo no Git fica mais limpa e clara, considerando apenas os commits essenciais. 
 
 ## Referências
 
@@ -184,3 +240,5 @@ https://www.youtube.com/watch?v=RGOj5yH7evk&t=2267s&ab_channel=freeCodeCamp.org
 https://www.youtube.com/watch?v=Uszj_k0DGsg&ab_channel=freeCodeCamp.org
 
 https://www.youtube.com/watch?v=qsTthZi23VE&t=903s&ab_channel=freeCodeCamp.org
+
+https://www.treinaweb.com.br/blog/git-merge-e-git-rebase-quando-usa-los
