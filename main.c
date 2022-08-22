@@ -48,11 +48,15 @@ void func_3(void){
 }
 
 void func_4(void){
-    printf("4");
+    printf("4!");
 }
 
 void func_5(void){
-    printf("5");
+    printf("5!");
+}
+
+void func_6(void){
+    printf("6!");
 }
 
 void func_greatings(enum idiomas_enum idioma){
