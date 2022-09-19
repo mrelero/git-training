@@ -173,6 +173,27 @@ ou
 
 git clone --recurse-submodules URL
 ```
+
+
+### Atualizando Submodulos
+É provável que ao utilizar sub-módulos tenha interesse em atualizar os fontes do sub-módulo e ao mesmo tempo puxar atualizações. Vejamos a seguinte situação:
+
+- Atualização do Sub-Módulo(SM) e Depois executar o comando de update:
+
+> Aqui ocorre o seguinte, ao aplicar o comando submodule update, todas as modificações realizadas pelo desenvolvedor no sub-módulo serão perdidas, pois substituirão as modificações.  
+
+Uma forma de contornar essa situação é aplicar o seguinte comando: 
+
+```
+git submodule update --remote --merge
+```
+
+Ou seja, as atualizações serão mescladas no repositório do projeto. 
+
+>❗️ Atenção! Para que as modificações sejam mescladas, o Sub-Repositório precisa estar em uma branch diferente da **detached HEAD**. Para isso, basta entrar na pasta do sub-repositório e usar o comando ``` git checkout branchname```, comitar as mudanças e depois usar o comando  ```git submodule update --remote --merge``` .
+
+
+
 ## Quando usar Merge e Rebase
 
 Suponha que temos a seguinte situação:
