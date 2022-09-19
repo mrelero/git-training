@@ -204,6 +204,7 @@ Para usar, basta aplicar o seguinte comando:
 ```
 git subtree add --prefix {local directory being pulled into} {remote repo URL} {remote branch} --squash
 ```
+>```--squash``` é um comando para suprimir todo o histórico antes do subtree adicionado. 
 
 Para atualizar o fonte da Subtree:
 
@@ -214,6 +215,15 @@ Para enviar atulizações:
 ```
 git subtree push --prefix {local directory being pulled into} {remote repo URL} {remote branch}
 ```
+
+Apesar de possuir comandos simples, como pull e push, existem algumas desvantagens de utilizar subtrees:
+
+- A checagem de atualizações não é simples. Ou seja, diferente do Submodule, que ao usar ```git Status``` as modificações ficam mais evidentes; 
+- Utilizar subtrees com multiplos sub-repos pode ser um problema. 
+
+Fonte: https://gist.github.com/SKempin/b7857a6ff6bddb05717cc17a44091202 
+
+
 
 ## Quando usar Merge e Rebase
 
@@ -284,3 +294,5 @@ https://www.youtube.com/watch?v=Uszj_k0DGsg&ab_channel=freeCodeCamp.org
 https://www.youtube.com/watch?v=qsTthZi23VE&t=903s&ab_channel=freeCodeCamp.org
 
 https://www.treinaweb.com.br/blog/git-merge-e-git-rebase-quando-usa-los
+
+https://gist.github.com/SKempin/b7857a6ff6bddb05717cc17a44091202
