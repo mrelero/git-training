@@ -193,6 +193,19 @@ Ou seja, as atualizações serão mescladas no repositório do projeto.
 >❗️ Atenção! Para que as modificações sejam mescladas, o Sub-Repositório precisa estar em uma branch diferente da **detached HEAD**. Para isso, basta entrar na pasta do sub-repositório e usar o comando ``` git checkout branchname```, comitar as mudanças e depois usar o comando  ```git submodule update --remote --merge``` .
 
 
+## Sub-tree
+
+Sub-tree é uma estratégia alternativa ao submodule. Para esse caso existem algumas vantagens:
+- Gerenciar um fluxo simples;
+- Projeto e arquivos disponíveis logo depois de aplicar git clone, sem a necessidade de usar o comando de atualização;
+- Usuários não precisam aprender nada novo de git para usar. 
+
+Para usar, basta aplicar o seguinte comando: 
+```
+git subtree add --prefix {local directory being pulled into} {remote repo URL} {remote branch} --squash
+```
+
+
 
 ## Quando usar Merge e Rebase
 
