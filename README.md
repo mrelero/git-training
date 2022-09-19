@@ -205,7 +205,15 @@ Para usar, basta aplicar o seguinte comando:
 git subtree add --prefix {local directory being pulled into} {remote repo URL} {remote branch} --squash
 ```
 
+Para atualizar o fonte da Subtree:
 
+```
+git subtree pull --prefix {local directory being pulled into} {remote repo URL} {remote branch} --squash
+```
+Para enviar atulizações:
+```
+git subtree push --prefix {local directory being pulled into} {remote repo URL} {remote branch}
+```
 
 ## Quando usar Merge e Rebase
 
