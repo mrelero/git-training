@@ -16,3 +16,9 @@ int main(void){
 
     return 3;
 }
+
+
+int fun2(void){
+
+    return 1;
+}
