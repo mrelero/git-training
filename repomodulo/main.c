@@ -14,10 +14,5 @@ int main(void){
 
     printf("Alo Alo!");
 
-    return 1;
-}
-
-
-int func(void){
-    return 1;
+    return 2;
 }
