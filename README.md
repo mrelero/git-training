@@ -263,6 +263,9 @@ Commit das atualizações:
 ```
 git subrepo commit <subdir> [<subrepo-ref>] [-m <msg>] [-e] [-f] [-F]
 ```
+
+>❗️ Apesar de promissor, este recurso tem pouco conteúdo e informação na internet. O que torna difícil de aplicar alguns comandos como commit e push. 
+
 ## Quando usar Merge e Rebase
 Suponha que temos a seguinte situação:
 
