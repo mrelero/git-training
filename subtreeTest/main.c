@@ -11,3 +11,11 @@ int main(void){
     printf("Oi Mundo!");
     return 1;
 }
+
+
+
+int func(void){
+
+
+    return 1;
+}
