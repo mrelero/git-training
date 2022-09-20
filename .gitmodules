@@ -1,6 +1,0 @@
-[submodule "sql-python-study"]
-	path = sql-python-study
-	url = https://github.com/mrelero/sql-python-study.git
-[submodule "login_register_project"]
-	path = login_register_project
-	url = https://github.com/mrelero/login_register_project
