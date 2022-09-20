@@ -224,12 +224,46 @@ Apesar de possuir comandos simples, como pull e push, existem algumas desvantage
 - Utilizar subtrees com multiplos sub-repos pode ser um problema. 
 
 
-Fonte: https://gist.github.com/SKempin/b7857a6ff6bddb05717cc17a44091202 
+## Sub-Repos
+De acordo com autor (@ingydotnet) o Sub-Repo é uma melhoria das outras duas alternativas, sub-tree e sub-module. São listados alguns benefícios: 
+- Execução por linha de comando simples e intuitivas; 
+- Usuarios clonam o repositório e sub-repositórios de forma direta;
+- Existe o arquivo .gitrepo para rastreio e identificação;
+- Branchs diferentes podem ter diferentes subrepos em diferentes estados;
+- ...
 
+Para clonar um subrepo, basta utilizar o comando:
 
+```
+git subrepo clone <repository> [<subdir>] [-b <branch>]
+```
 
+Obs. Existem outros comandos que podem ser utilizados, como: ```git subrepo clone <repository> [<subdir>] [-b <branch>] [-f] [-m <msg>] [-e] [--method <merge|rebase>]```. 
+
+Também é possível tornar um subdiretório em um subrepo:
+
+```
+git subrepo init <subdir> [-r <remote>] [-b <branch>] [--method <merge|rebase>]
+```
+
+Para puxar as novas atualizações do repositório remoto:
+
+```
+git subrepo pull <subdir>|--all [-M|-R|-f] [-m <msg>] [-e] [-b <branch>] [-r <remote>] [-u]
+```
+
+Enviar atualizações:
+
+```
+git subrepo push <subdir>|--all [<branch>] [-r <remote>] [-b <branch>] [-M|-R] [-u] [-f] [-s] [-N]
+```
+
+Commit das atualizações:
+
+```
+git subrepo commit <subdir> [<subrepo-ref>] [-m <msg>] [-e] [-f] [-F]
+```
 ## Quando usar Merge e Rebase
-
 Suponha que temos a seguinte situação:
 
 ```
@@ -299,3 +333,8 @@ https://www.youtube.com/watch?v=qsTthZi23VE&t=903s&ab_channel=freeCodeCamp.org
 https://www.treinaweb.com.br/blog/git-merge-e-git-rebase-quando-usa-los
 
 https://gist.github.com/SKempin/b7857a6ff6bddb05717cc17a44091202
+
+https://gist.github.com/SKempin/b7857a6ff6bddb05717cc17a44091202 
+
+https://github.com/ingydotnet/git-subrepo
+
