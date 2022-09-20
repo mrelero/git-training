@@ -9,6 +9,8 @@ int main(void){
     printf("Hei");
 
     printf("Oi Mundo!");
+
+    printf("Hello World!");
     return 1;
 }
 
