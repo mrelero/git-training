@@ -220,10 +220,11 @@ Apesar de possuir comandos simples, como pull e push, existem algumas desvantage
 
 - A checagem de atualizações não é simples. Ou seja, diferente do Submodule, que ao usar ```git Status``` as modificações ficam mais evidentes; 
 - Utilizar subtrees com multiplos sub-repos pode ser um problema. 
+- Dificuldade para mesclar atualizações próprias da subtree com atualizações do repositório remoto. A função Pull pode ocasionar conflitos em caso de atualizações realizadas. Em caso de atualizações no fonte do sub-repo, o sub-módulo parece mais adequado. 
 
 Fonte: https://gist.github.com/SKempin/b7857a6ff6bddb05717cc17a44091202 
 
-Teste Readme
+
 
 ## Quando usar Merge e Rebase
 
