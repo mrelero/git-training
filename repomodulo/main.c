@@ -15,11 +15,4 @@ int main(void){
     printf("Alo Alo!");
 
     return 3;
-
-    int a = func();
-}
-
-
-int func(void){
-    return 10;
 }
