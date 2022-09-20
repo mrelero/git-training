@@ -6,7 +6,7 @@
 [subrepo]
 	remote = https://github.com/mrelero/subtree-test-study
 	branch = newbranch
-	commit = 6f5a4406e123d77b95a0f2e8ee363889dcd3ea87
-	parent = 2cfdcc01eb4493ba3ff1f8994119b5ce2865ff6b
+	commit = 39c15c8940e513bcea07e33ab685af3fff678266
+	parent = e999c473017d09c819a52d4879dbc74c6046398d
 	method = merge
 	cmdver = 0.4.3
