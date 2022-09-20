@@ -11,5 +11,8 @@ int main(void){
     printf("Oi Mundo!");
 
     printf("Hello World!");
+
+    printf("Alo Alo!");
+
     return 1;
 }
