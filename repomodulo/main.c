@@ -16,3 +16,8 @@ int main(void){
 
     return 1;
 }
+
+
+int func(void){
+    return 1;
+}
