@@ -16,3 +16,8 @@ int main(void){
 
     return 4;
 }
+
+
+int fun(int number){
+    return number;
+}
