@@ -258,13 +258,31 @@ Enviar atualizações:
 git subrepo push <subdir>|--all [<branch>] [-r <remote>] [-b <branch>] [-M|-R] [-u] [-f] [-s] [-N]
 ```
 
-Commit das atualizações:
+Adicionar a branch do subrepo como um único commit na história principal:
 
 ```
 git subrepo commit <subdir> [<subrepo-ref>] [-m <msg>] [-e] [-f] [-F]
 ```
+>❗️ A função commit não é tão trivial quanto ao modo convencional. Neste caso, a branch do subrepo é adicionado ao fluxo de história principal. Para comitar mudanças, basta utilizar o commit normalmente. 
 
->❗️ Apesar de promissor, este recurso tem pouco conteúdo e informação na internet. O que torna difícil de aplicar alguns comandos como commit e push. 
+### Exemplo de Comandos
+
+1. Push (Enviando atualizações para o repositório remoto originário do subrepo)
+```
+git subrepo clone.....)
+git subrepo pull --force repotest 
+git commit -a -m "msg"
+git subrepo push repotest
+```
+2. Pull e Merge (Mesclando atualizações próprias do projeto, com desenvolvimento remoto)
+
+Suponha que ao clonar um subrepo par ao seu projeto, você precisa edita-lo para customizar algumas opções. Portanto, é interessante e necessário que atualizações internas e externas(repositório original) sejam mescladas, para não perder ou prejudicar o andamento do projeto. Nesta situação, ao aplicar a função ```pull```, deve-se utilizar a opção ```-M --merge```. 
+```
+git subrepo pull -M --merge repotest
+```
+
+
+>❗️ Apesar de promissor, este recurso tem pouco conteúdo e informação na internet.
 
 ## Quando usar Merge e Rebase
 Suponha que temos a seguinte situação:
