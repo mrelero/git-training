@@ -280,9 +280,17 @@ Suponha que ao clonar um subrepo par ao seu projeto, você precisa edita-lo para
 ```
 git subrepo pull -M --merge repotest
 ```
+3. Branch Remoto (Puxar e enviar desenvolvimento de Branchs diferentes)
 
+Ao trabalhar com subrepo, pode ser necessário a puxar do repositório remoto, outras branchs da principal. Para isso, basta usar o comando ```-b <branch>``` . 
+```
+git subrepo pull --force repotest -b NomeDaBranch
+git commit -a -m "Atualizações"
+git subrepo push repotest
+```
+O comando push pega a branch do último pull e envia, portanto não é necessário especificar qual branch será enviado o desenvolvimento. Caso seja necessário mudar a branch, basta especificar o nome da branch no push ```-b <branch>```. 
 
->❗️ Apesar de promissor, este recurso tem pouco conteúdo e informação na internet.
+>❗️ Apesar de promissor, o subrepo tem pouco conteúdo e informação na internet.
 
 ## Quando usar Merge e Rebase
 Suponha que temos a seguinte situação:
