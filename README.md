@@ -312,6 +312,14 @@ Abaixo um exemplo real retirado de um repositório de teste:
 |
 * commit b4df05c88ac3ed1cfce563357ddf7aee3129613a
 ```
+O Rebase segue a mesma lógica do convencional. Ao realizar o comando, o fluxo de commits é reposicionado conforme o diagrama abaixo:
+
+                  A'--B'--C' Sub Repo
+                 / (git subrepo pull <subdir> --method --rebase)
+    D---E---F---G Repositório Remoto
+
+>Sempre importante relembrar que é preciso ter cuidado ao aplicar o Rebase com atualizações já enviadas para o upstream. 
+
 
 3. Branch Remoto (Puxar e enviar desenvolvimento de Branchs diferentes)
 
