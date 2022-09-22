@@ -280,6 +280,39 @@ Suponha que ao clonar um subrepo par ao seu projeto, você precisa edita-lo para
 ```
 git subrepo pull -M --merge repotest
 ```
+Quando ocorre o Merge, o fluxo é semelhante ao mostrado abaixo:
+```
+          A---B---C  subrepo
+         /         \ (git subrepo pull <subdir> -M --merge)     
+    D---E---F---G---H Repositório Remoto
+```
+>O Repositório Remoto (origem do subrepo) não sofre alteração com o Pull, ou seja
+
+Abaixo um exemplo real retirado de um repositório de teste:
+
+```
+*   commit 45b74374d280b7477d92abed199aa8837c4dbd20 (refs/subrepo/repotest/commit, refs/subrepo/repotest/branch, subrepo/repotest)
+|\  Merge: cacbb10 b50d992
+| | 
+| | 
+| |
+| |     Merge commit 'refs/subrepo/repotest/fetch' into subrepo/repotest
+| |
+| * commit b50d992cd50a222654d112a74a1dfac2eaf47212 (refs/subrepo/repotest/fetch)
+| | 
+| | 
+| |
+| |     fun11
+| |
+* | commit cacbb106533ebd9aaf555ff8b38bb40ed479ca40
+|/  
+|   
+|
+|       
+|
+* commit b4df05c88ac3ed1cfce563357ddf7aee3129613a
+```
+
 3. Branch Remoto (Puxar e enviar desenvolvimento de Branchs diferentes)
 
 Ao trabalhar com subrepo, pode ser necessário a puxar do repositório remoto, outras branchs da principal. Para isso, basta usar o comando ```-b <branch>``` . 
@@ -289,6 +322,8 @@ git commit -a -m "Atualizações"
 git subrepo push repotest
 ```
 O comando push pega a branch do último pull e envia, portanto não é necessário especificar qual branch será enviado o desenvolvimento. Caso seja necessário mudar a branch, basta especificar o nome da branch no push ```-b <branch>```. 
+
+
 
 >❗️ Apesar de promissor, o subrepo tem pouco conteúdo e informação na internet.
 
