@@ -174,6 +174,11 @@ ou
 git clone --recurse-submodules URL
 ```
 
+Para atualização convencional, basta utilizar o seguinte comando: 
+
+```
+git submodule update --remote
+```
 
 ### Atualizando Submodulos
 É provável que ao utilizar sub-módulos tenha interesse em atualizar os fontes do sub-módulo e ao mesmo tempo puxar atualizações. Vejamos a seguinte situação:
@@ -220,9 +225,9 @@ git subtree push --prefix {local directory being pulled into} {remote repo URL} 
 
 Apesar de possuir comandos simples, como pull e push, existem algumas desvantagens de utilizar subtrees:
 
-- A checagem de atualizações não é simples. Ou seja, diferente do Submodule, que ao usar ```git Status``` as modificações ficam mais evidentes; 
 - Utilizar subtrees com multiplos sub-repos pode ser um problema. 
 
+Para ver um exemplo de Tree com subtree, basta ver o [Anexo.md](/Anexo.md)
 
 ## Sub-Repos
 De acordo com autor (@ingydotnet) o Sub-Repo é uma melhoria das outras duas alternativas, sub-tree e sub-module. São listados alguns benefícios: 
