@@ -337,6 +337,48 @@ git subrepo push repotest
 O comando push pega a branch do último pull e envia, portanto não é necessário especificar qual branch será enviado o desenvolvimento. Caso seja necessário mudar a branch, basta especificar o nome da branch no push ```-b <branch>```. 
 
 
+4. Pull e Rebase
+
+Quando é utilizado o comando Rebase ao realizar um Pull, o fluxo/histórico de commits fica reorganizado em uma linha histórica. Observe o Exemplo abaixo, onde a seguinte situação foi aplicada:
+
+```
+             c1sub----------c3sub-------------c5sub--pull -M -rebase  (subrepo)
+            /                                       /
+    ---Inicio-------c2repo-----------c4repo--------/ (repositório remoto)
+```
+
+Foram realizados commits alternados entre o projeto (subrepo) e o repositório remoto que deu origem ao subrepo. Ao realizar o ```pull -M --rebase``` no subrepo, identifica-se que o fluxo de commits resulta em uma linha única de histórico, com os commits do repositório remoto no topo, e os demais em sequência. Compare o fluxo abaixo com o exemplo do ```pull -M --merge``` acima. 
+
+```
+
+* commit 0ca4fa14e3c535a986c5eac0ea865739a19c1cfc (HEAD -> develop, origin/develop)
+| 
+| 
+|
+|     git subrepo pull (merge) math_operations_h****
+|
+|
+* commit 10c3a11c44a5fd2485e9567b19f9c495ff341742
+| 
+| 
+|
+|     c5sub
+|
+* commit d9199328b749eae407a84922b615bd7a05302481
+| 
+| 
+|
+|     c3sub
+|
+* commit 64d229cc982a1d7a0f9670bd258115591426a26d
+| 
+| 
+|
+|     c1sub
+|
+```
+
+****Obs: por algum motivo o subrepo indica a informação  ``git subrepo pull (merge) math_operations_h`` com merge. Mas foi applicado rebase. 
 
 >❗️ Apesar de promissor, o subrepo tem pouco conteúdo e informação na internet.
 
