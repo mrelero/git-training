@@ -382,6 +382,35 @@ Foram realizados commits alternados entre o projeto (subrepo) e o repositório r
 
 >❗️ Apesar de promissor, o subrepo tem pouco conteúdo e informação na internet.
 
+## Projetos Exemplos de Subrepos, subtrees e submodules
+
+Foram desenvolvidos 3 projetos como exemplo de aplicação de submodule, subtree e subrepo. Todos eles tulizaram a biblioteca math_operations_h como base para suas aplicações. De forma muito simples, o projeto consiste em uma calculadora, com operações matemáticas básicas provenientes da biblioteca importada. O foco dos repositórios não é o desenvolvimento das operações, mais sim aplicar os comandos e manusear a biblioteca por meio de subrepo, subtree e submodule. 
+
+- [subrepo](https://github.com/mrelero/calculator_c_subrepo)
+- [subtree](https://github.com/mrelero/calculator_c_subtree)
+- [submodule](https://github.com/mrelero/calculator_c_submodule)
+
+### Qual método utilizar ? Subrepo, subtree ou submodule ?
+Os três métodos possuem o mesmo objetivo, importar repositórios remotos para dentro de outro repositório ou projeto. Todos possuem bom desempenho, mas alguns se destacam conforme os critérios apresentados abaixo:
+
+| Critério                                  | submodule | subtree | subrepo |
+|-------------------------------------------|-----------|---------|---------|
+| Documentação                              | Alto      | Médio   | Baixo   |
+| Manuseio Comandos                         | Alto      | Alto    | Alto    |
+| Atualização de Repositório Remoto (Push)  | Baixo     | Alto    | Alto    |
+| Dowload de Atualizações (Update)          | Alto      | Médio   | Alto    |
+| Mesclar atualizações (Pull Merge/Rebase)  | Baixo     | Médio   | Alto    |
+| Rastreabilidade                           | Baixo     | Alto    | Alto    |
+| Histórico de Commits                      | Baixo     | Alto    | Médio   |
+| Multiplos Repositórios importados         | Baixo     | Médio   | Alto    |
+| Organização                               | Alto      | Alto    | Alto    |
+
+Desempenho = Alto, médio ou baixo;
+
+
+De forma geral, tanto o subtree quanto o subrepo possuiram melhor desempenho. Ambos possuem comandos mais conhecidos, como Pull, Push e Clone, que são mais familiares, e facilitam o aprendizado. No entanto, alguns deles como merge, commit e branch, podem ser mais complexos. Outro aspecto importante que levam o destaque destes dois métodos é a flexibilidade e atualizações com mesclagens do projeto atual com atualizações do repositório remoto. 
+
+
 ## Quando usar Merge e Rebase
 Suponha que temos a seguinte situação:
 
